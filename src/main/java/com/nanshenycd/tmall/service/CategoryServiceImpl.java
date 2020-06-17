@@ -19,6 +19,7 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     CategoryMapper categoryMapper;
+    @Autowired CategoryService categoryService;
 
     @Override
     public List<Category> list() {
@@ -47,6 +48,7 @@ public class CategoryServiceImpl implements CategoryService {
         categoryMapper.updateByPrimaryKeySelective(category);
     }
 }
+
 /**
 * 模仿天猫整站ssm 教程 为how2j.cn 版权所有
 * 本教程仅用于学习使用，切勿用于非法用途，由此引起一切后果与本站无关

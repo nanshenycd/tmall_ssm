@@ -37,7 +37,12 @@ public class CategoryController {
         model.addAttribute("page", page);
         return "admin/listCategory";
     }
-
+        public void list(){
+            List<Category> list = categoryService.list();
+            for (Category category:list) {
+                System.out.println(category.getName());
+            }
+        }
     @RequestMapping("admin_category_add")
     public String add(Category c, HttpSession session, UploadedImageFile uploadedImageFile) throws IOException {
         categoryService.add(c);

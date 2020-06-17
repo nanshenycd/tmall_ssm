@@ -3,6 +3,8 @@
 package com.nanshenycd.tmall.service;
 
 import com.nanshenycd.tmall.pojo.Category;
+import org.springframework.context.annotation.Bean;
+
 import java.util.List;
 
 public interface CategoryService{
